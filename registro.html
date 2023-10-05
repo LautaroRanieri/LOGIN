@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styleregistro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <a href="index.html">←Return to homepage</a>
+        <h1>Record</h1>
+        <form id="registroForm" method="post" onsubmit="return validateForm()" action="registrar.php">
+            <div class="nombre">
+                <input type="text" id="nombre" required placeholder="Name" name="nombre" >
+            </div>
+            <div class="correo">
+                <input type="email" id="correo" required placeholder="Email" name="correo" >  
+            </div>
+            <div class="contraseña">
+                <input type="password" id="password" required placeholder="Password" name="contra">  
+                <button id="showPassword" type="button" class="material-icons">visibility</button>
+            </div>
+            <div class="confirmar-contraseña">
+                <input type="password" id="confirmPassword" required placeholder="Confirm password">  
+            </div>
+            <input type="submit" value="Check in">
+            <div class="iniciar-sesion">Do you already have an account? <a href="index.html">Log in</a></div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="styleregistro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <h1>Login</h1>
+        
+        <!-- FORMULARIO: cuando la persona presione START una vez que pone sus datos, se abre "ingreso.php" 
+        esto queda indicado en la primer linea del FORM con la sentencia ACTION. -->
+        
+        <form id="loginForm" method="post" onsubmit="return validateForm()" action="ingreso.php">
+            <div class="username">
+                <input type="text" id="" name="usuario" required placeholder="Username">  
+            </div>
+            <div class="contrasena">
+                <input type="password" id="contrasena" name="contra" required placeholder="Password">  
+                <button id="showPassword" type="button" class="material-icons" onclick="togglePasswordVisibility()">visibility</button> 
+            </div>
+            <input type="submit" value="Start"> 
+        </form>    
+
+        <!-- Si olvido la clave, va a olvidar_contrasena.html -->
+        <div class="recordar"><a href="olvidar_ password.html">Forgot your password?</a></div>
+        <!-- Si no esta dado de alta, va a abrirse registro.html -->
+        <div class="registrarse"> <a href="registro.html" id="registroLink" >Check in</a></div>
+       
+    </div>
+
+    <!--CODIGO DE JS PARA QUE FUNCIONE EL OJITO -->
+    <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById("contrasena");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>
